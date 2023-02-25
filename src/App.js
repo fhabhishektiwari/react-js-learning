@@ -8,6 +8,7 @@ import Select from './components/useSelect';
 import NativeSelect from './components/MultipleSelect';
 import Greet from './components/Hello';
 import Message from './components/Message';
+import Counter from './components/Counter';
 
 const initialValue={
   messageValue:'',
@@ -78,6 +79,7 @@ function App() {
           </Greet>
           <Greet name="Saurabh" heroName="Ant Man"/>
             <Message/>
+            <Counter/>
           </Grid>
         </Grid>
         
