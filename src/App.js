@@ -14,6 +14,7 @@ import FunctionalClick from './components/FunctionalClick';
 import ClassClick from './components/ClassClick';
 import EventBind from './components/EventBind';
 import ParentComponent from './components/ParentComponent';
+import UserGreeting from './components/UserGreeting';
 
 const initialValue={
   messageValue:'',
@@ -90,6 +91,7 @@ function App() {
             <ClassClick/>
             <EventBind/>
             <ParentComponent/>
+            <UserGreeting/>
           </Grid>
         </Grid>
         
