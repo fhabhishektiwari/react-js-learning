@@ -13,6 +13,7 @@ import Welcome from './components/Welcome';
 import FunctionalClick from './components/FunctionalClick';
 import ClassClick from './components/ClassClick';
 import EventBind from './components/EventBind';
+import ParentComponent from './components/ParentComponent';
 
 const initialValue={
   messageValue:'',
@@ -88,6 +89,7 @@ function App() {
             <FunctionalClick/>
             <ClassClick/>
             <EventBind/>
+            <ParentComponent/>
           </Grid>
         </Grid>
         
