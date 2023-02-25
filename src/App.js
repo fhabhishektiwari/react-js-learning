@@ -12,6 +12,7 @@ import Counter from './components/Counter';
 import Welcome from './components/Welcome';
 import FunctionalClick from './components/FunctionalClick';
 import ClassClick from './components/ClassClick';
+import EventBind from './components/EventBind';
 
 const initialValue={
   messageValue:'',
@@ -86,6 +87,7 @@ function App() {
             <Welcome name="Rohit" heroname="Bat Man"/>
             <FunctionalClick/>
             <ClassClick/>
+            <EventBind/>
           </Grid>
         </Grid>
         
