@@ -23,6 +23,8 @@ import './components/appStyles.css';
 import Styles from './components/appStyles.module.css';
 import Form from './components/Form';
 import BasicForm from './components/BasicForm';
+import FragmentsDemo from './components/FragmentsDemo';
+import Table from './components/Table';
 
 
 const initialValue={
@@ -118,6 +120,10 @@ function App() {
             <Form/>
 
             <BasicForm/>
+
+            <FragmentsDemo/>
+
+            <Table/>
 
           </Grid>
         </Grid>
