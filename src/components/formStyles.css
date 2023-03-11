@@ -1,0 +1,48 @@
+.main-form{
+    margin: 25px auto;
+    width:350px;
+    min-height: 350px;
+    /* border:1px solid #000; */
+    box-shadow: 0 0 10px #000;
+    border-radius: 4px 32px 4px 32px;
+    padding:8px 12px;
+}
+input,label,textarea,select{
+    display: block;
+    text-align: left;
+}
+
+label{
+    margin: 8px 0;
+}
+input,textarea,select,option{
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 6px;
+}
+input,textarea,select{
+    border:1px solid #8e8de8;
+}
+input:focus,textarea:focus,select:focus{
+    border:1px solid orangered;
+    outline: none;
+}
+
+textarea{
+    resize: none;
+    height: 80px;
+}
+
+.button{
+    width: 110px;
+    padding: 8px 12px;
+    background-color: #0d412f;
+    color: #fff;
+    margin: 20px 0;
+    border: none;
+    border-radius: 4px;
+}
+.button:hover{
+    background-color: #0a724d;
+    cursor: pointer;
+}

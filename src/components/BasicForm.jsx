@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import './formStyles.css';
 
 function BasicForm() {
     const intialField={
         username:'',
         comments:'',
-        department:'developer'
+        department:'default'
     }
     const [formData,setFormData]=useState(intialField);
 
@@ -23,19 +24,20 @@ function BasicForm() {
         alert(`${username} ${comments} ${department}`)
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='main-form'>
             <h3>Basic form</h3>
             <div>
                 <label htmlFor="username">Username</label>
-                <input name='username' value={username} onChange={handleInputChange}/>
+                <input name='username' placeholder='Enter username' value={username} onChange={handleInputChange}/>
             </div>
             <div>
                 <label htmlFor="comments">Comments</label>
-                <textarea name='comments' value={comments} onChange={handleInputChange}></textarea>
+                <textarea name='comments' placeholder='Type comments...' value={comments} onChange={handleInputChange}></textarea>
             </div>
             <div>
                 <label htmlFor="department">Department</label>
                 <select name="department" value={department} onChange={handleInputChange}>
+                    <option value="default">---Choose Option---</option>
                     <option value="developer">Developer</option>
                     <option value="mechanical">Mechanical</option>
                     <option value="electrical">Electrical</option>
@@ -43,7 +45,7 @@ function BasicForm() {
 
                 </select>
             </div>
-            <button type="submit">Submit</button>
+            <button className='button' type="submit">Submit</button>
         </form>
     )
 }
