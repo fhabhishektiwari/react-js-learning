@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import { ThemeProvider, createTheme } from '@mui/material/styles'
-import { Grid, MenuItem, Switch } from '@mui/material';
+import { Button, Grid, MenuItem, Switch } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline'
 import Main from './components/Main';
 import Select from './components/useSelect';
@@ -17,6 +17,11 @@ import ParentComponent from './components/ParentComponent';
 import UserGreeting from './components/UserGreeting';
 import NameList from './components/NameList';
 import InputField from './components/InputField/InputField';
+import Stylesheet from './components/Stylesheet';
+import Inline from './components/Inline';
+import './components/appStyles.css';
+import Styles from './components/appStyles.module.css';
+
 
 const initialValue={
   messageValue:'',
@@ -27,6 +32,8 @@ const options = [
   { value: 'option2', label: 'Option 2' },
   { value: 'option3', label: 'Option 3' },
 ];
+
+
 function App() {
   const [theme, setTheme] = useState(false);
   const [selectedOption, setSelectedOption] = useState([]);
@@ -95,9 +102,20 @@ function App() {
             <ParentComponent/>
             <UserGreeting/>
             <NameList/>
+
+
+            <Stylesheet primary={true}/>
+            <Stylesheet primary={false} />
+
+            <Inline/>
+
+            
+            <h1 className='error'>Error</h1>
+            <h1 className={Styles.success}>Success</h1>
+
+
           </Grid>
         </Grid>
-        
       </ThemeProvider>
 
     </div>
