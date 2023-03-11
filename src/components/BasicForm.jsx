@@ -1,44 +1,41 @@
 import React, { useState } from 'react'
 
 function BasicForm() {
-    const [username,setUsername]=useState('');
-    const [comments, setComments] = useState('');
-    const [department, setDepartment] = useState('Developer');
-
-
-
-    const handleUsernameChange=(event)=>{
-        setUsername(event.target.value)
+    const intialField={
+        username:'',
+        comments:'',
+        department:'developer'
     }
+    const [formData,setFormData]=useState(intialField);
 
-    const handleCommentsChange=(event)=>{
-        setComments(event.target.value)
-    }
+    const {username,comments,department}=formData;
 
-    const handleDepartmentChange=(event)=>{
-        setDepartment(event.target.value)
+    const handleInputChange=(event)=>{
+        const {name,value}=event.target;
+        setFormData(prevState=>({
+            ...prevState,
+            [name]:value
+        }));
     }
 
     const handleSubmit=(e)=>{
-        alert(`${username} ${comments}${department}`)
         e.preventDefault();
-        // console.log(username);
+        alert(`${username} ${comments} ${department}`)
     }
-
     return (
         <form onSubmit={handleSubmit}>
             <h3>Basic form</h3>
             <div>
                 <label htmlFor="username">Username</label>
-                <input value={username} onChange={handleUsernameChange}/>
+                <input name='username' value={username} onChange={handleInputChange}/>
             </div>
             <div>
                 <label htmlFor="comments">Comments</label>
-                <textarea value={comments} onChange={handleCommentsChange}></textarea>
+                <textarea name='comments' value={comments} onChange={handleInputChange}></textarea>
             </div>
             <div>
                 <label htmlFor="department">Department</label>
-                <select value={department} onChange={handleDepartmentChange}>
+                <select name="department" value={department} onChange={handleInputChange}>
                     <option value="developer">Developer</option>
                     <option value="mechanical">Mechanical</option>
                     <option value="electrical">Electrical</option>
