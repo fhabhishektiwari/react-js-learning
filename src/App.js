@@ -95,29 +95,6 @@ function App() {
             <ParentComponent/>
             <UserGreeting/>
             <NameList/>
-
-            <InputField
-              label="Email Address"
-              type="email"
-              name="email"
-              // value={email}
-              variant="outlined"
-              onChange={handleChange}
-              placeholder="Enter your email address"
-              // startAdornment="@"
-              display="inline-block"
-            />
-            <InputField
-              label="Email Address"
-              type="email"
-              name="email"
-              // value={email}
-              variant="outlined"
-              onChange={handleChange}
-              placeholder="Enter your email address"
-              // startAdornment="@"
-              display="block"
-            />
           </Grid>
         </Grid>
         
