@@ -21,6 +21,8 @@ import Stylesheet from './components/Stylesheet';
 import Inline from './components/Inline';
 import './components/appStyles.css';
 import Styles from './components/appStyles.module.css';
+import Form from './components/Form';
+import BasicForm from './components/BasicForm';
 
 
 const initialValue={
@@ -109,10 +111,13 @@ function App() {
 
             <Inline/>
 
-            
+
             <h1 className='error'>Error</h1>
             <h1 className={Styles.success}>Success</h1>
 
+            <Form/>
+
+            <BasicForm/>
 
           </Grid>
         </Grid>
