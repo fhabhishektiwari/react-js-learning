@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import './App.css';
-import { ThemeProvider, createTheme } from '@mui/material/styles'
-import {darkTheme,lightTheme} from './theme/theme';
 
 import {Box, Switch, Typography } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline'
@@ -31,10 +29,8 @@ function App() {
   
   return (
     <div className="App">
-      <ThemeProvider theme={darkTheme}>
-        <CssBaseline />
         <Main/>
-        {<label>{darkTheme.palette.mode} mode</label>}
+        {/*<label>{darkTheme.palette.mode} mode</label>*/}
         {<Switch
           checked={darkMode}
           color='success'
@@ -50,10 +46,6 @@ function App() {
           text="Button"
           color="secondary"
         />
-      
-
-      </ThemeProvider>
-
     </div>
   );
 }
