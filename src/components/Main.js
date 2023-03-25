@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material'
 import React from 'react'
 const Main = () => {
     return (
@@ -8,10 +9,9 @@ const Main = () => {
                 margin: "auto",
             }}
         >
-            <h1>
-                Abhishek Kumar Tiwari
-            </h1>
-            <strong>React MUI Dark/Light mode</strong>
+            <Typography variant='sh1'>
+                React MUI Dark/Light mode
+            </Typography>
         </div>
     )
 }
